@@ -4,6 +4,7 @@ export type QuestionStatus = "open" | "submitted" | "locked";
 
 export interface Question {
   id: string;
+  category: string;
   window: QuestionWindow;
   windowLabel: string;
   windowTiming: string;
@@ -48,17 +49,18 @@ export const demoUser = {
 export const questions: Question[] = [
   {
     id: "q1",
+    category: "Free Kick",
     window: "micro",
     windowLabel: "Micro",
     windowTiming: "1–3 min",
-    text: "Who will have more possession in the next 2 minutes?",
-    options: ["LAFC", "Seattle", "Even"],
-    selectedOption: "LAFC",
-    status: "submitted",
+    text: "Will a free kick be awarded in the next 5 minutes?",
+    options: ["Yes", "No"],
+    status: "open",
     points: 50,
   },
   {
     id: "q2",
+    category: "Goal",
     window: "short",
     windowLabel: "Short",
     windowTiming: "5–10 min",
@@ -69,23 +71,35 @@ export const questions: Question[] = [
   },
   {
     id: "q3",
+    category: "Red Card",
     window: "medium",
     windowLabel: "Medium",
     windowTiming: "Rest of half",
-    text: "How many total shots on goal by halftime?",
-    options: ["0–2", "3–5", "6+"],
+    text: "Will a red card be shown before halftime?",
+    options: ["Yes", "No"],
     status: "open",
     points: 150,
   },
   {
     id: "q4",
+    category: "Yellow Card",
+    window: "short",
+    windowLabel: "Short",
+    windowTiming: "5–10 min",
+    text: "Will a yellow card be shown in the next 15 minutes?",
+    options: ["Yes", "No"],
+    status: "open",
+    points: 100,
+  },
+  {
+    id: "q5",
+    category: "Goal",
     window: "long",
     windowLabel: "Long",
     windowTiming: "Full match",
-    text: "Who wins the match?",
-    options: ["LAFC", "Opponent", "Draw"],
-    selectedOption: "LAFC",
-    status: "submitted",
+    text: "How many total goals will be scored in the match?",
+    options: ["0–1", "2–3", "4+"],
+    status: "open",
     points: 250,
   },
 ];

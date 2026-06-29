@@ -12,7 +12,7 @@ export default function PredictPage() {
         <div className="mb-5">
           <h1 className="text-lg font-bold text-white">Predict</h1>
           <p className="mt-1 text-xs text-zinc-400">
-            Answer match questions across four resolution windows
+            5 active predictions — free kicks, goals, cards & more
           </p>
         </div>
 

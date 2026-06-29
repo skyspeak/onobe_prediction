@@ -26,6 +26,9 @@ export function QuestionCard({ question }: { question: Question }) {
     <article className="rounded-xl border border-zinc-800 bg-lafc-gray p-4">
       <div className="mb-3 flex items-start justify-between gap-2">
         <div className="flex flex-wrap items-center gap-2">
+          <span className="rounded-full border border-lafc-gold/30 bg-lafc-gold/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-lafc-gold">
+            {question.category}
+          </span>
           <span
             className={`rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${windowColors[question.window]}`}
           >

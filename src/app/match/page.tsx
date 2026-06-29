@@ -74,14 +74,14 @@ export default function MatchHubPage() {
             </Link>
           </div>
           <div className="space-y-2">
-            {questions.slice(0, 2).map((q) => (
+            {questions.map((q) => (
               <div
                 key={q.id}
                 className="rounded-lg border border-zinc-800 bg-lafc-gray px-3 py-2.5"
               >
                 <div className="mb-1 flex items-center gap-2">
                   <span className="text-[10px] font-semibold uppercase text-lafc-gold">
-                    {q.windowLabel}
+                    {q.category}
                   </span>
                   <span className="text-[10px] text-zinc-600">·</span>
                   <span className="text-[10px] capitalize text-zinc-500">
